@@ -29,10 +29,10 @@ int[] list = A_1, A_2, ... , A_m; // (m is length of list)
 <br> int k;
 | Test Case | Scenario | Input | Expected Output |
 | --- | --- | --- | --- |
-| Case 1 | Empty List | list = {}; <br> k = 1; | return average = 0; |
-| Case 2 | `k` is negative or 0 | list = {1, 2, 3 , 4}; <br> k = -1; | return average = 0; |
-| Case 3 | `k` within list length| list = {3, 5, 6 , 7}; <br> k = 2; | return average = 4; //(3 + 5)/2 |
-| Case 4 | `k` over list length | list = {2, 4, 3, 5, 7}; <br> k = 9; | return average = 4; //(2 + 4 + 3 + 5 + 7)/5 |
+| TC 1 | Empty List | list = {}; <br> k = 1; | return average = 0; |
+| TC 2 | `k` is negative or 0 | list = {1, 2, 3 , 4}; <br> k = -1; | return average = 0; |
+| TC 3 | `k` within list length| list = {3, 5, 6 , 7}; <br> k = 2; | return average = 4; //(3 + 5)/2 |
+| TC 4 | `k` over list length | list = {2, 4, 3, 5, 7}; <br> k = 9; | return average = 4; //(2 + 4 + 3 + 5 + 7)/5 |
 
 ### c. Identify and specify the partitions and generate partition test cases.
 **`k` Partitions:**
@@ -47,13 +47,23 @@ int[] list = A_1, A_2, ... , A_m; // (m is length of list)
 **Partition Test Cases**
 | Test Case | Scenario | Input | Expected Output |
 | --- | --- | --- | --- |
-| Partition 1 | k <= 0 | list = {1, 2, 3, 4}; <br> k = 0; | return average = 2; |
-| Partition 2 | 0 < k < list.length | list = {4, 2, 6, 1}; <br> k = 2; | return average = 3; |
-| Partition 3 | k >= list.length | list = {3, 5, 7}; <br> k = 5; | return average = 5; |
-| Partinion 4 | list.length = 0 | list = {}; <br> k = 5; | return average = 0; |
-| Partition 5 | list.length > 0 | list = {2, 4, 6}; <br> k = 3; | return average = 4; |
+| TC 1 (Partition 1) | k <= 0 | list = {1, 2, 3, 4}; <br> k = 0; | return average = 2; |
+| TC 2 (Partition 2) | 0 < k < list.length | list = {4, 2, 6, 1}; <br> k = 2; | return average = 3; |
+| TC 3 (Partition 3) | k >= list.length | list = {3, 5, 7}; <br> k = 5; | return average = 5; |
+| TC 4 (Partition 4) | list.length = 0 | list = {}; <br> k = 5; | return average = 0; |
+| TC 5 (Partition 5) | list.length > 0 | list = {2, 4, 6}; <br> k = 3; | return average = 4; |
 
 ### d. Generate boundary value test cases.
+| Test Case | Scenario | Input | Expected Output |
+| --- | --- | --- | --- |
+| TC 1 (Boundary 1) | k = 0 | list = {1, 2, 3, 4}; <br> k = 0; | return average = 0; |
+| TC 2 (Boundary 2) | k = 1 | list = {1, 2, 3, 4}; <br> k = 1; | return average = 1; |
+| TC 3 (Boundary 3) | k = -1 | list = {1, 2, 3, 4}; <br> k = -1; | return average = 0; |
+| TC 4 (Boundary 4) | k = list.length | list = {1, 2, 3, 4}; <br> k = 4; | return average = 2; |
+| TC 5 (Boundary 5) | k = list.length + 1 | list = {1, 2, 3, 4}; <br> k = 5; | return average = 2; |
+| TC 6 (Boundary 6) | k = list.length - 1 | list = {1, 2, 3, 4}; <br> k = 3; | return average = 2; |
+| TC 7 (Boundary 7) | list.length = 0 | list = {}; <br> k = 1; | return average = 0; |
+| TC 8 (Boundary 8) | list.length = 1 | list = {3}; <br> k = 1; | return average = 3; |
 
 ### e. Implement the average function in a class Average and generate test cases using Junit. (Please also submit this part of the assignment in your individual GitHub classroom code)
 
