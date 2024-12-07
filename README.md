@@ -21,7 +21,7 @@ For the "average" function we will do the following:
                 return average;
       }}
 -------------------------------------------------------------------------------------------------------------------
-## a. Brief Functional Description
+### a. Brief Functional Description
 The `average` function takes an input of int `k` and int array `list` as its parameters and if the minimum value from `k` to the end of the `list` is not negative, then `n` will represent the last index of the sublist of `list` and the program calculates and returns the average of a sublist of the array `list` from index 0 to `n` by cumulatively adding the integers in those indexes to the `average` and then dividing the `average` by `n`. If the minimum value from `k` to the end of the list is negative, then the `average` is 0.
 
 ### b. Generate functional test case based on functional description.
