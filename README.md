@@ -29,13 +29,29 @@ int[] list = A_1, A_2, ... , A_m; // (m is length of list)
 <br> int k;
 | Test Case | Scenario | Input | Expected Output |
 | --- | --- | --- | --- |
-| Case 1 | if m = 0 (empty list). | list = {}; <br> k = 1; | return average = 0; |
-| Case 2 | if m = 1 (single-element). | list = {5}; <br> k = 5;| return average = 5; |
-| Case 3 | if m >= 2 and k <= 0 | list = {1, 2, 3 , 4}; <br> k = -1; | return average = 0; |
-| Case 4 | if m >= 2 and 0 < k < m | list = {3, 5, 6 , 7}; <br> k = 2; | return average = 4; //(3 + 5)/2 |
-| Case 5 | if m >= 2 and k >= m | list = {2, 4, 3, 5, 7}; <br> k = 9; | return average = 4; //(2 + 4 + 3 + 5 + 7)/5 |
+| Case 1 | Empty List | list = {}; <br> k = 1; | return average = 0; |
+| Case 2 | `k` is negative or 0 | list = {1, 2, 3 , 4}; <br> k = -1; | return average = 0; |
+| Case 3 | `k` within list length| list = {3, 5, 6 , 7}; <br> k = 2; | return average = 4; //(3 + 5)/2 |
+| Case 4 | `k` over list length | list = {2, 4, 3, 5, 7}; <br> k = 9; | return average = 4; //(2 + 4 + 3 + 5 + 7)/5 |
 
 ### c. Identify and specify the partitions and generate partition test cases.
+**`k` Partitions:**
+- Partition 1: **k <= 0:** No subset of array selected
+- Partition 2: **0 < k < list.length:** A subset of array `list` averaged
+- Partition 3: **k >= list.length:** Entire array `list` is averaged
+
+**`list` Partitions:**
+- Partition 4: **list.length = 0:** Empty array `list`.
+- Partition 5: **list.length > 0:** Non-empty array `list`.
+
+**Partition Test Cases**
+| Test Case | Scenario | Input | Expected Output |
+| --- | --- | --- | --- |
+| Partition 1 | k <= 0 | list = {1, 2, 3, 4}; <br> k = 0; | return average = 2; |
+| Partition 2 | 0 < k < list.length | list = {4, 2, 6, 1}; <br> k = 2; | return average = 3; |
+| Partition 3 | k >= list.length | list = {3, 5, 7}; <br> k = 5; | return average = 5; |
+| Partinion 4 | list.length = 0 | list = {}; <br> k = 5; | return average = 0; |
+| Partition 5 | list.length > 0 | list = {2, 4, 6}; <br> k = 3; | return average = 4; |
 
 ### d. Generate boundary value test cases.
 
