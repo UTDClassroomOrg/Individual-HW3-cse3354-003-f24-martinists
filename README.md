@@ -61,7 +61,7 @@ int[] list = A_1, A_2, ... , A_m; // (m is length of list)
 | TC 3 (Boundary 3) | k = -1 | list = {1, 2, 3, 4}; <br> k = -1; | return average = 0; |
 | TC 4 (Boundary 4) | k = list.length | list = {1, 2, 3, 4}; <br> k = 4; | return average = 2; |
 | TC 5 (Boundary 5) | k = list.length + 1 | list = {1, 2, 3, 4}; <br> k = 5; | return average = 2; |
-| TC 6 (Boundary 6) | k = list.length - 1 | list = {1, 2, 3, 4}; <br> k = 3; | return average = 2; |
+| TC 6 (Boundary 6) | k = list.length - 1 | list = {3, 4, 6, 7, 1}; <br> k = 4; | return average = 5; |
 | TC 7 (Boundary 7) | list.length = 0 | list = {}; <br> k = 1; | return average = 0; |
 | TC 8 (Boundary 8) | list.length = 1 | list = {3}; <br> k = 1; | return average = 3; |
 
