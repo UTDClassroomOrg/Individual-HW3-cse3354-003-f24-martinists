@@ -22,10 +22,18 @@ For the "average" function we will do the following:
       }}
 -------------------------------------------------------------------------------------------------------------------
 ### a. Brief Functional Description
-The `average` function takes an input of int `k` and int array `list` as its parameters and if the minimum value from `k` to the end of the `list` is not negative, then `n` will represent the last index of the sublist of `list` and the program calculates and returns the average of a sublist of the array `list` from index 0 to `n` by cumulatively adding the integers in those indexes to the `average` and then dividing the `average` by `n`. If the minimum value from `k` to the end of the list is negative, then the `average` is 0.
+The `average` function takes an input of int `k` and int array `list` as its parameters and if the minimum value of `k` or the end of the `list` is not negative, then `n` will represent the last index of the sublist of `list` and the program calculates and returns the average of a sublist of the array `list` from index 0 to `n` by cumulatively adding the integers in those indexes to the `average` and then dividing the `average` by `n`. If the minimum value from `k` to the end of the list is negative, then the `average` is 0.
 
 ### b. Generate functional test case based on functional description.
-
+int[] list = A_1, A_2, ... , A_m; // (m is length of list)
+int k;
+| Test Case | Scenario | Input | Expected Output |
+| --- | --- | --- | --- |
+| Case 1 | if m = 0 (empty list). | list = {}; <br> k = 1; | return average = 0; |
+| Case 2 | if m = 1 (single-element). | list = {5}; <br> k = 5;| return average = 5; |
+| Case 3 | if m >= 2 and k <= 0 | list = {1, 2, 3 , 4}; <br> k = -1; | return average = 0; |
+| Case 4 | if m >= 2 and 0 < k < m | list = {3, 5, 6 , 7}; <br> k = 2; | return average = 4; //(3 + 5)/2 |
+| Case 5 | if m >= 2 and k >= m | list = {2, 4, 3, 5, 7}; <br> k = 9; | return average = 4; //(2 + 4 + 3 + 5 + 7)/5 |
 
 ### c. Identify and specify the partitions and generate partition test cases.
 
