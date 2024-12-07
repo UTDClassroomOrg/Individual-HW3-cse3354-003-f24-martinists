@@ -26,6 +26,7 @@ The `average` function takes an input of int `k` and int array `list` as its par
 
 ### b. Generate functional test case based on functional description.
 
+
 ### c. Identify and specify the partitions and generate partition test cases.
 
 ### d. Generate boundary value test cases.
