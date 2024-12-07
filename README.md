@@ -26,7 +26,7 @@ The `average` function takes an input of int `k` and int array `list` as its par
 
 ### b. Generate functional test case based on functional description.
 int[] list = A_1, A_2, ... , A_m; // (m is length of list)
-int k;
+<br> int k;
 | Test Case | Scenario | Input | Expected Output |
 | --- | --- | --- | --- |
 | Case 1 | if m = 0 (empty list). | list = {}; <br> k = 1; | return average = 0; |
