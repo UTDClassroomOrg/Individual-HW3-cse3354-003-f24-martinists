@@ -47,7 +47,7 @@ int[] list = A_1, A_2, ... , A_m; // (m is length of list)
 **Partition Test Cases**
 | Test Case | Scenario | Input | Expected Output |
 | --- | --- | --- | --- |
-| TC 1 (Partition 1) | k <= 0 | list = {1, 2, 3, 4}; <br> k = 0; | return average = 2; |
+| TC 1 (Partition 1) | k <= 0 | list = {1, 2, 3, 4}; <br> k = 0; | return average = 0; |
 | TC 2 (Partition 2) | 0 < k < list.length | list = {4, 2, 6, 1}; <br> k = 2; | return average = 3; |
 | TC 3 (Partition 3) | k >= list.length | list = {3, 5, 7}; <br> k = 5; | return average = 5; |
 | TC 4 (Partition 4) | list.length = 0 | list = {}; <br> k = 5; | return average = 0; |
