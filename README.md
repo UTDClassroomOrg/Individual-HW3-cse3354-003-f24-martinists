@@ -81,3 +81,8 @@ These tests failed because the average class' for loop iterated starting from 1 
 
 ### g. Code Coverage (VS Code)
 ![Code Coverage Image](https://github.com/UTDClassroomOrg/Individual-HW3-cse3354-003-f24-martinists/blob/main/HW3_Coverage.png)
+
+#### Sources Used
+- Visual Studio Code
+- Kung Book Ch. 20 (Black-Box Testing)
+- Test Runner for Java extension from Microsoft
