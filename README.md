@@ -69,5 +69,14 @@ int[] list = A_1, A_2, ... , A_m; // (m is length of list)
 [Link to average class and averageTest class source files](https://github.com/UTDClassroomOrg/Individual-HW3-cse3354-003-f24-martinists/tree/main/HW3_Files/src)
 ### f. Compile and run the test cases. Record any failures and errors that are reported. Analyze and briefly explain why each of the failures and errors occurs and how you fix them. Correct all the failures and errors until the CUT (Component Under Test) passes all the test cases.
 
-### g. Measure the code coverage using a code coverage tools such as EclEmma. Your test case must achieve 100% branch coverage.
+Upon running the test cases, I received 5 failures out of 9 testcases. These include,
+- testAverageSingleElementArray()
+- testAverageK1()
+- testAverageKEqualList()
+- testAverageKOverList()
+- testAverageKOneLessList()
+
+These tests failed because the average class' for loop iterated starting from 1 to less than the value n, which means that when determining the average, the program skips the first index in the array since the array index in Java starts at 0 and not 1. The code looks like `for(int i = 1; i < n; i++)` on line 8. To fix this, instead of instantiating i to 1, it must be instantiated to 0. The corrected code looks like `for(int i = 0; i < n; i++)` on line 8. This causes all 9 test cases to pass.
+
+### g. Code Coverage (VS Code)
 ![Code Coverage Image](https://github.com/UTDClassroomOrg/Individual-HW3-cse3354-003-f24-martinists/blob/main/HW3_Coverage.png)
