@@ -70,3 +70,4 @@ int[] list = A_1, A_2, ... , A_m; // (m is length of list)
 ### f. Compile and run the test cases. Record any failures and errors that are reported. Analyze and briefly explain why each of the failures and errors occurs and how you fix them. Correct all the failures and errors until the CUT (Component Under Test) passes all the test cases.
 
 ### g. Measure the code coverage using a code coverage tools such as EclEmma. Your test case must achieve 100% branch coverage.
+![Code Coverage Image](https://github.com/UTDClassroomOrg/Individual-HW3-cse3354-003-f24-martinists/blob/main/HW3_Coverage.png)
